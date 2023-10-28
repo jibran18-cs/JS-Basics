@@ -12,13 +12,13 @@ let accountMail= "jibran@gmail.com";
  accountCity= "Lodhran"
 
  //Here we can see can change the value of every variable except const
-// console.table([accountId, accountMail, accountNo, accountCity])
+console.table([accountId, accountMail, accountNo, accountCity])
 
 //Important
 
-// We have to assign value with declaration of const but in case of var and let we can declare them first and assign value later
+// We have to intailize while declaration of const but in case of var and let we can declare them first and assign value later
 
-// const testConst;
+ // const testConst; This is wrong
 let a;
 var b;
 
