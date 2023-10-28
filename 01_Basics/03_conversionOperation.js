@@ -21,8 +21,8 @@ let z= "j"
 
 
 // *********************** Operations ***********************
-console.log("2"+3+4) //It will convert the type of whole value to the first value in this case it will be converted into string type
-console.log(4+2+"2");//In this case it will be converted into string type
+console.log(typeof("2"+3+4)) //It will convert the type of whole value to the first value in this case it will be converted into string type
+console.log(typeof(4+2+"2"));//In this case it will be converted into string type
 
 //Prefix  => It will update the value first and then give the result
 let x= 4
