@@ -13,5 +13,5 @@ console.log(3+
     //symbol
     //boolean
  
- console.log(typeof (null)); //It'a type is object
+ console.log(typeof (null)); //It's type is object
  console.log(typeof (undefined)); // It's type is undefined , means we didn't assign value 

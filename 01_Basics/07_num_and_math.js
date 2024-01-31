@@ -24,7 +24,7 @@ const thousnds=10000000
 // console.log(Math.floor(4.9))
 // console.log(Math.max(4,0,9,3))
 // console.log(Math.min(4,0,9,3))
-
+// console.log(Math.abs(-5));
 // Important
 // console.log(Math.random()) Value of Math.random will always be between 0 and 1
 // console.log((Math.random()*10)+1) This will give value b/w 1 and 10
@@ -33,3 +33,4 @@ const thousnds=10000000
 let min= 10
 let max= 20
 console.log(Math.floor(Math.random()*(max-min+1)+min))
+console.log(Math.floor(Math.random()*6 + 1))

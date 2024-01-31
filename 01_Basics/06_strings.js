@@ -15,7 +15,8 @@ let age= 21
 
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //Methods of string
-
+// Some of the most important methods of String are 1-substring() 2-Slice() 3-Trim() 4-indexOf() 5-Replace() 6-include()
+// if you want to see all methods of string then console.log(new String('Jibran')) in console
 const myStr= new String("hitesh-hc")
 //1=> The substring() method of String values returns the part of this string from the start index up to and excluding the end index, or to the end of the string if no end index is supplied
 
@@ -23,9 +24,10 @@ const myStr= new String("hitesh-hc")
 // console.log(myStr);
 
 // 2=> The slice() method of String values extracts a section of this string and returns it as a new string, without modifying the original string.
-// The main difference b/w substring and slice is that we can use negative values in substring but not in slice
-console.log(myStr.slice(-8,2));
-// console.log(myStr);
+// The main difference b/w substring and slice is that we can use negative values in slice but not in substring
+
+console.log(myStr.slice(-9,2));
+console.log(myStr);
 
 // 3=> The trim() method of String values removes whitespace from both ends of this string and returns a new string, without modifying the original string.
 
@@ -48,6 +50,8 @@ const indexOfFirst = paragraph.indexOf(searchTerm);
 // 5=> Replace
 
 const myName= "Jibran Daha"
-console.log(myName.replace("Daha", "Jaffar")); 
+// console.log(myName.replace("Daha", "Jaffar")); 
 //6=> Include
-console.log( myName.includes("daha"));
+// console.log( myName.includes("Daha"));
+
+console.log(myName.split(' '));
