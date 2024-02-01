@@ -20,7 +20,62 @@
 </body>
 
 <script>
-    //All events in JS run sequentially 
-    // Important (Using onClick in html element is not a good approach in JS. We can use 2nd approach given below) 
+    //All events in JS run sequentially (But sometimes we can make it insequential by using async)
+    /* There are three most common approaches to deal with events
+    1- To use onclick on html tag which is not a good practice
+
+    2-++++++++++ document.getElementById('owl').onclick= function(){ alert('owl is clicked')}++++++++++++++ This approach is also prohibited
+
+    3- The best way to deal with events is to use addEventListener because it gives us a lot of events options yo use(Example given below)
+    */
+//    document.getElementById('owl').addEventListener('click',function(e){
+//     alert('owl is clicked')
+//    })
+
+   /* There are three arguments of addEventListener 1-Event 2-Function 3-True/False (If we don't use third arg it will be false by defualt)
+   Now why we use true or false as third argument? This is the most important concept 
+   1-If we use false then it will follow bubble pattern means event will move from inner element to outer
+   2-If we use true then it will follow capture pattern means event will move from outer element to inner
+   For example in above elements we can see there are (li) which are nested in (ul) so if we use events on one of the (li) and overall (ul) then if we
+   click any li only that event will envoke which we used on ul but if we click then if third arg is false then first that (li) will invoke and
+   after that ul will invoke but in case of true it is vice versa.......
+   */ 
+//    document.getElementById('owl').addEventListener('click',function(e){
+//     console.log('owl is clicked')
+//    }, false)
+//    document.getElementById('images').addEventListener('click',function(e){
+//     console.log('ul is clicked')
+//    }, false)
+
+   //Sometimes we may want to stop event propagation then we can use stopPropagation method
+//    document.getElementById('japan').addEventListener('click',function(e){
+//     console.log('japan is clicked')
+//     e.stopPropagation()
+//    }, false)
+
+   //Sometimes we want to prevent default nature of somthing like forms or links . In our case we are preventing defualt behavior of google link
+//    document.getElementById('google').addEventListener('click',function(e){
+//     console.log('event default behavior is canceled')
+//     e.stopPropagation()
+//     e.preventDefault()
+//    }, false)
+   
+
+
+   // Now I am giving you real life scenario. Click on the image and it should be removed
+//    document.getElementById('images').addEventListener('click', function(e){
+//        let removeItem= e.target.parentNode
+//        removeItem.remove() //Now here when we are clicking on image then image removed but when we click on (li) its parent which is (ul) is removed
+     
+//    }, false)
+   document.getElementById('images').addEventListener('click', function(e){
+    console.log(e.target.tagName);
+    if (e.target.tagName === 'IMG') {
+        let removeItem= e.target.parentNode
+       removeItem.remove()
+    }
+        //Here we have used a check to avoid removal of (ul)
+     
+   }, false)
 </script>
 </html>
