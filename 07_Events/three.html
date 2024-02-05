@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jibran Jafffar</title>
+</head>
+<body>
+    <h1>Me and code</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+</body>
+
+<script>
+// We may decide to execute a function not right now, but at a certain time later. That’s called “scheduling a call”.
+
+// There are two methods for it:
+
+//1--- setTimeout() allows us to run a function once after the interval of time.
+//2--- setInterval() allows us to run a function repeatedly, starting after the interval of time, then repeating continuously at that interval.
+
+//(Important) These methods are not a part of core JavaScript specification. But most environments have the internal scheduler and provide these methods. In particular, they are supported in all browsers and Node.js(These methods/functions are part of APIs).
+const greeting=function(){
+    console.log("Hello Jibran Jaffar");
+}
+let stop; // Now you know why sometimes we declare variable
+
+document.querySelector('#start').addEventListener('click', function(){
+   console.log('Start');
+   if(!stop){
+    stop=setInterval(greeting,
+2000)
+   }
+   
+})
+
+
+document.querySelector('#stop').addEventListener('click', function(){
+    console.log("Stop");
+    clearInterval(stop)
+    stop= null
+})
+
+
+</script>
+</html>
+
