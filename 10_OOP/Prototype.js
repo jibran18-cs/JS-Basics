@@ -94,3 +94,15 @@ Array------------------>   {Object} ---------------> null
 
 string----------------->
 */
+
+// Let add method to string
+
+let string1= 'Jibran    '
+let string2= 'Adeel     '
+
+String.prototype.trueLength= function(){
+    console.log(this);
+    console.log(this.trim().length);
+}
+string1.trueLength()
+string2.trueLength()
